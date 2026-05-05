@@ -1,0 +1,98 @@
+{
+  "DocHeader": {
+    "home": "Home",
+    "documentation": "Documentation",
+    "api": "API",
+    "support": "Support"
+  },
+  "Footer": {
+    "rights": "2024 HelpCenter. All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "contact": "Contact"
+  },
+  "Nav": {
+    "products": "Products",
+    "pricing": "Pricing",
+    "blog": "Blog",
+    "ourCompany": "Our Company",
+    "propertyManagement": "Property Management",
+    "maintenanceTools": "Maintenance Tools",
+    "allProducts": "All Products",
+    "aboutUs": "About Us",
+    "contact": "Contact",
+    "requestQuote": "Request A Quote",
+    "chat": "Chat",
+    "toggleMenu": "Toggle menu",
+    "english": "English",
+    "french": "Français",
+    "language": "Language"
+  },
+  "Home": {
+    "heroTitle": "How can we help you?",
+    "heroSubtitle": "Search our knowledge base or browse categories below to find the answers you need.",
+    "searchPlaceholder": "Search articles...",
+    "searchAria": "Search {siteName} articles",
+    "browseHeading": "Browse by Category",
+    "heroImageAlt": "Bright modern office workspace"
+  },
+  "Article": {
+    "backToCategory": "Back to {category}",
+    "onThisPage": "On this page",
+    "relatedArticles": "Related Articles",
+    "moreInCategory": "More in this category",
+    "noContent": "No content available."
+  },
+  "Category": {
+    "backToCategories": "Back to categories",
+    "couldNotLoad": "Category could not be loaded",
+    "categoryId": "Category id: {id}",
+    "backHome": "Back to home",
+    "titleSuffix": "Articles",
+    "titlePage": "{name} — Articles (page {page})",
+    "titleSingle": "{name} — Articles",
+    "descriptionCount": "{name}: {count, plural, one {# article} other {# articles}}",
+    "notFound": "Category not found"
+  },
+  "Tag": {
+    "backToCategories": "Back to categories",
+    "couldNotLoad": "Tag could not be loaded",
+    "tagSlug": "Tag slug: {slug}",
+    "backHome": "Back to home",
+    "titlePage": "{name} — Articles (page {page})",
+    "titleSingle": "{name} — Articles",
+    "descriptionTagged": "{name}: {count, plural, one {# article} other {# articles}} tagged \"{tag}\"",
+    "descriptionCount": "{name}: {count, plural, one {# article} other {# articles}}",
+    "tagJsonName": "Tag: {name}",
+    "noArticlesTag": "No articles with this tag yet."
+  },
+  "Pagination": {
+    "navLabel": "Pagination",
+    "previous": "Previous",
+    "next": "Next",
+    "pageOf": "Page {current} of {total}",
+    "articleCount": "{count, plural, one {# article} other {# articles}}"
+  },
+  "Browse": {
+    "backToCategories": "Back to categories",
+    "categories": "Categories",
+    "role": "Role",
+    "clear": "Clear",
+    "noTagsCategory": "No tags in this category yet.",
+    "noTagsPage": "No tags on this page yet.",
+    "emptyCategory": "No articles in this category yet.",
+    "noMatchFilters": "No articles found matching your filters."
+  },
+  "BlogGrid": {
+    "empty": "No categories loaded. Confirm <code>BLOG_CATEGORY_ID</code>, <code>BASE_URL</code> (or <code>API_BASE_URL</code>), and <code>SUBSCRIPTION_API_KEY</code>.",
+    "articleLine": "{count, plural, one {# article} other {# articles}}"
+  },
+  "Errors": {
+    "articleNotFound": "Article not found",
+    "category": "Category",
+    "tag": "Tag"
+  },
+  "Metadata": {
+    "breadcrumbHome": "Home"
+  }
+}

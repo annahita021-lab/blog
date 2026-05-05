@@ -1,0 +1,98 @@
+{
+  "DocHeader": {
+    "home": "Accueil",
+    "documentation": "Documentation",
+    "api": "API",
+    "support": "Assistance"
+  },
+  "Footer": {
+    "rights": "2024 HelpCenter. Tous droits réservés.",
+    "privacy": "Politique de confidentialité",
+    "terms": "Conditions d’utilisation",
+    "contact": "Contact"
+  },
+  "Nav": {
+    "products": "Produits",
+    "pricing": "Tarifs",
+    "blog": "Blog",
+    "ourCompany": "Notre entreprise",
+    "propertyManagement": "Gestion immobilière",
+    "maintenanceTools": "Outils de maintenance",
+    "allProducts": "Tous les produits",
+    "aboutUs": "À propos",
+    "contact": "Contact",
+    "requestQuote": "Demander un devis",
+    "chat": "Chat",
+    "toggleMenu": "Ouvrir le menu",
+    "english": "English",
+    "french": "Français",
+    "language": "Langue"
+  },
+  "Home": {
+    "heroTitle": "Comment pouvons-nous vous aider ?",
+    "heroSubtitle": "Recherchez dans notre base de connaissances ou parcourez les catégories ci-dessous pour trouver les réponses dont vous avez besoin.",
+    "searchPlaceholder": "Rechercher des articles…",
+    "searchAria": "Rechercher des articles {siteName}",
+    "browseHeading": "Parcourir par catégorie",
+    "heroImageAlt": "Espace de bureau moderne et lumineux"
+  },
+  "Article": {
+    "backToCategory": "Retour à {category}",
+    "onThisPage": "Sur cette page",
+    "relatedArticles": "Articles connexes",
+    "moreInCategory": "Plus dans cette catégorie",
+    "noContent": "Aucun contenu disponible."
+  },
+  "Category": {
+    "backToCategories": "Retour aux catégories",
+    "couldNotLoad": "Impossible de charger la catégorie",
+    "categoryId": "Identifiant de catégorie : {id}",
+    "backHome": "Retour à l’accueil",
+    "titleSuffix": "Articles",
+    "titlePage": "{name} — Articles (page {page})",
+    "titleSingle": "{name} — Articles",
+    "descriptionCount": "{name} : {count, plural, one {# article} other {# articles}}",
+    "notFound": "Catégorie introuvable"
+  },
+  "Tag": {
+    "backToCategories": "Retour aux catégories",
+    "couldNotLoad": "Impossible de charger l’étiquette",
+    "tagSlug": "Slug de l’étiquette : {slug}",
+    "backHome": "Retour à l’accueil",
+    "titlePage": "{name} — Articles (page {page})",
+    "titleSingle": "{name} — Articles",
+    "descriptionTagged": "{name} : {count, plural, one {# article} other {# articles}} avec l’étiquette « {tag} »",
+    "descriptionCount": "{name} : {count, plural, one {# article} other {# articles}}",
+    "tagJsonName": "Étiquette : {name}",
+    "noArticlesTag": "Aucun article avec cette étiquette pour le moment."
+  },
+  "Pagination": {
+    "navLabel": "Pagination",
+    "previous": "Précédent",
+    "next": "Suivant",
+    "pageOf": "Page {current} sur {total}",
+    "articleCount": "{count, plural, one {# article} other {# articles}}"
+  },
+  "Browse": {
+    "backToCategories": "Retour aux catégories",
+    "categories": "Catégories",
+    "role": "Rôle",
+    "clear": "Effacer",
+    "noTagsCategory": "Aucune étiquette dans cette catégorie pour le moment.",
+    "noTagsPage": "Aucune étiquette sur cette page pour le moment.",
+    "emptyCategory": "Aucun article dans cette catégorie pour le moment.",
+    "noMatchFilters": "Aucun article ne correspond à vos filtres."
+  },
+  "BlogGrid": {
+    "empty": "Aucune catégorie chargée. Vérifiez <code>BLOG_CATEGORY_ID</code>, <code>BASE_URL</code> (ou <code>API_BASE_URL</code>) et <code>SUBSCRIPTION_API_KEY</code>.",
+    "articleLine": "{count, plural, one {# article} other {# articles}}"
+  },
+  "Errors": {
+    "articleNotFound": "Article introuvable",
+    "category": "Catégorie",
+    "tag": "Étiquette"
+  },
+  "Metadata": {
+    "breadcrumbHome": "Accueil"
+  }
+}
