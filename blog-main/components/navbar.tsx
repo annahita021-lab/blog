@@ -131,12 +131,26 @@ export function Navbar() {
                 aria-expanded={langMenuOpen}
                 aria-haspopup="listbox"
               >
-                <span className="text-base">{locale === "fr" ? "🇫🇷" : "🇬🇧"}</span>
-                <ChevronDown className={cn("h-4 w-4 transition-transform", langMenuOpen && "rotate-180")} />
+                {locale === "fr" ? (
+                  <svg className="w-5 h-4 rounded-sm overflow-hidden" viewBox="0 0 640 480">
+                    <path fill="#002654" d="M0 0h213.3v480H0z"/>
+                    <path fill="#fff" d="M213.3 0h213.4v480H213.3z"/>
+                    <path fill="#ce1126" d="M426.7 0H640v480H426.7z"/>
+                  </svg>
+                ) : (
+                  <svg className="w-5 h-4 rounded-sm overflow-hidden" viewBox="0 0 640 480">
+                    <path fill="#012169" d="M0 0h640v480H0z"/>
+                    <path fill="#FFF" d="m75 0 244 181L562 0h78v62L400 241l240 178v61h-80L320 301 81 480H0v-60l239-178L0 64V0h75z"/>
+                    <path fill="#C8102E" d="m424 281 216 159v40L369 281h55zm-184 20 6 35L54 480H0l240-179zM640 0v3L391 191l2-44L590 0h50zM0 0l239 176h-60L0 42V0z"/>
+                    <path fill="#FFF" d="M241 0v480h160V0H241zM0 160v160h640V160H0z"/>
+                    <path fill="#C8102E" d="M0 193v96h640v-96H0zM273 0v480h96V0h-96z"/>
+                  </svg>
+                )}
+                <span className="text-xs font-bold">+</span>
               </button>
               {langMenuOpen && (
                 <ul
-                  className="absolute right-0 top-full mt-1 min-w-[140px] rounded-lg border border-gray-100 bg-white py-1 shadow-lg z-50"
+                  className="absolute right-0 top-full mt-1 min-w-[160px] rounded-lg border border-gray-100 bg-white py-1 shadow-lg z-50"
                   role="listbox"
                 >
                   {routing.locales.map((loc) => (
@@ -144,10 +158,25 @@ export function Navbar() {
                       <button
                         type="button"
                         role="option"
-                        className="w-full px-4 py-2 text-left text-sm hover:bg-gray-50 hover:text-[#4838BF]"
+                        className="flex items-center gap-3 w-full px-4 py-2 text-left text-sm hover:bg-gray-50 hover:text-[#4838BF]"
                         onMouseDown={(e) => e.preventDefault()}
                         onClick={() => switchLocale(loc)}
                       >
+                        {loc === "en" ? (
+                          <svg className="w-5 h-4 rounded-sm overflow-hidden" viewBox="0 0 640 480">
+                            <path fill="#012169" d="M0 0h640v480H0z"/>
+                            <path fill="#FFF" d="m75 0 244 181L562 0h78v62L400 241l240 178v61h-80L320 301 81 480H0v-60l239-178L0 64V0h75z"/>
+                            <path fill="#C8102E" d="m424 281 216 159v40L369 281h55zm-184 20 6 35L54 480H0l240-179zM640 0v3L391 191l2-44L590 0h50zM0 0l239 176h-60L0 42V0z"/>
+                            <path fill="#FFF" d="M241 0v480h160V0H241zM0 160v160h640V160H0z"/>
+                            <path fill="#C8102E" d="M0 193v96h640v-96H0zM273 0v480h96V0h-96z"/>
+                          </svg>
+                        ) : (
+                          <svg className="w-5 h-4 rounded-sm overflow-hidden" viewBox="0 0 640 480">
+                            <path fill="#002654" d="M0 0h213.3v480H0z"/>
+                            <path fill="#fff" d="M213.3 0h213.4v480H213.3z"/>
+                            <path fill="#ce1126" d="M426.7 0H640v480H426.7z"/>
+                          </svg>
+                        )}
                         {loc === "en" ? t("english") : t("french")}
                       </button>
                     </li>
@@ -238,8 +267,23 @@ export function Navbar() {
                 key={loc}
                 type="button"
                 onClick={() => switchLocale(loc)}
-                className="flex items-center gap-2 w-full px-4 py-3 text-sm font-medium text-gray-600 rounded-lg hover:text-[#4838BF] hover:bg-[#4838BF]/5 transition-colors text-left"
+                className="flex items-center gap-3 w-full px-4 py-3 text-sm font-medium text-gray-600 rounded-lg hover:text-[#4838BF] hover:bg-[#4838BF]/5 transition-colors text-left"
               >
+                {loc === "en" ? (
+                  <svg className="w-5 h-4 rounded-sm overflow-hidden" viewBox="0 0 640 480">
+                    <path fill="#012169" d="M0 0h640v480H0z"/>
+                    <path fill="#FFF" d="m75 0 244 181L562 0h78v62L400 241l240 178v61h-80L320 301 81 480H0v-60l239-178L0 64V0h75z"/>
+                    <path fill="#C8102E" d="m424 281 216 159v40L369 281h55zm-184 20 6 35L54 480H0l240-179zM640 0v3L391 191l2-44L590 0h50zM0 0l239 176h-60L0 42V0z"/>
+                    <path fill="#FFF" d="M241 0v480h160V0H241zM0 160v160h640V160H0z"/>
+                    <path fill="#C8102E" d="M0 193v96h640v-96H0zM273 0v480h96V0h-96z"/>
+                  </svg>
+                ) : (
+                  <svg className="w-5 h-4 rounded-sm overflow-hidden" viewBox="0 0 640 480">
+                    <path fill="#002654" d="M0 0h213.3v480H0z"/>
+                    <path fill="#fff" d="M213.3 0h213.4v480H213.3z"/>
+                    <path fill="#ce1126" d="M426.7 0H640v480H426.7z"/>
+                  </svg>
+                )}
                 {loc === "en" ? t("english") : t("french")}
               </button>
             ))}
