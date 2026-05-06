@@ -16,20 +16,6 @@ export function Navbar() {
   const pathname = usePathname()
   const [, startTransition] = useTransition()
 
-  const productItems = [
-    { label: t("maintenance"), href: "#maintenance" },
-    { label: t("assetsParts"), href: "#assets-parts" },
-    { label: t("communication"), href: "#communication" },
-    { label: t("crm"), href: "#crm" },
-    { label: t("salesRentals"), href: "#sales-rentals" },
-  ]
-
-  const navLinks = [
-    { label: t("pricing"), href: "#pricing" },
-    { label: t("blog"), href: "/" },
-    { label: t("ourCompany"), href: "#company" },
-  ]
-
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [langMenuOpen, setLangMenuOpen] = useState(false)
@@ -50,6 +36,20 @@ export function Navbar() {
     setLangMenuOpen(false)
     setIsMobileMenuOpen(false)
   }
+
+  const productItems = [
+    { label: t("maintenance"), href: "#maintenance" },
+    { label: t("assetsParts"), href: "#assets-parts" },
+    { label: t("communication"), href: "#communication" },
+    { label: t("crm"), href: "#crm" },
+    { label: t("salesRentals"), href: "#sales-rentals" },
+  ]
+
+  const navLinks = [
+    { label: t("pricing"), href: "#pricing" },
+    { label: t("blog"), href: "/" },
+    { label: t("ourCompany"), href: "#company" },
+  ]
 
   return (
     <header
