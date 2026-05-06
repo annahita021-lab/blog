@@ -16,8 +16,15 @@ export function Navbar() {
   const pathname = usePathname()
   const [, startTransition] = useTransition()
 
+  const productItems = [
+    { label: t("maintenance"), href: "#maintenance" },
+    { label: t("assetsParts"), href: "#assets-parts" },
+    { label: t("communication"), href: "#communication" },
+    { label: t("crm"), href: "#crm" },
+    { label: t("salesRentals"), href: "#sales-rentals" },
+  ]
+
   const navLinks = [
-    { label: t("products"), href: "#products" },
     { label: t("pricing"), href: "#pricing" },
     { label: t("blog"), href: "/" },
     { label: t("ourCompany"), href: "#company" },
@@ -26,6 +33,7 @@ export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [langMenuOpen, setLangMenuOpen] = useState(false)
+  const [productsMenuOpen, setProductsMenuOpen] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -68,6 +76,40 @@ export function Navbar() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-1">
+            {/* Products Dropdown */}
+            <div className="relative">
+              <button
+                type="button"
+                onClick={() => setProductsMenuOpen(!productsMenuOpen)}
+                onBlur={() => setTimeout(() => setProductsMenuOpen(false), 150)}
+                className="relative flex items-center gap-1 px-4 py-2 text-sm font-medium text-gray-600 rounded-lg transition-all duration-200 hover:text-[#722F37] hover:bg-[#722F37]/5 group"
+                aria-expanded={productsMenuOpen}
+                aria-haspopup="menu"
+              >
+                {t("products")}
+                <span className="text-xs font-bold">+</span>
+                <span className="absolute bottom-1 left-4 right-4 h-0.5 bg-[#722F37] scale-x-0 group-hover:scale-x-100 transition-transform duration-200 origin-left" />
+              </button>
+              {productsMenuOpen && (
+                <div className="absolute left-0 top-full mt-1 min-w-[200px] rounded-lg border border-gray-100 bg-white py-2 shadow-lg z-50">
+                  {productItems.map((item, index) => (
+                    <Link
+                      key={item.label}
+                      href={item.href}
+                      onMouseDown={(e) => e.preventDefault()}
+                      onClick={() => setProductsMenuOpen(false)}
+                      className={cn(
+                        "block px-5 py-3 text-sm font-medium text-gray-700 hover:text-[#722F37] hover:bg-gray-50 transition-colors",
+                        index !== productItems.length - 1 && "border-b border-gray-100"
+                      )}
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
             {navLinks.map((link) => (
               <Link
                 key={link.label}
@@ -148,6 +190,35 @@ export function Navbar() {
         )}
       >
         <div className="bg-white px-6 py-4 space-y-1">
+          {/* Mobile Products Dropdown */}
+          <div>
+            <button
+              type="button"
+              onClick={() => setProductsMenuOpen(!productsMenuOpen)}
+              className="flex items-center justify-between w-full px-4 py-3 text-sm font-medium text-gray-600 rounded-lg hover:text-[#722F37] hover:bg-[#722F37]/5 transition-colors"
+            >
+              <span>{t("products")}</span>
+              <span className={cn("text-xs font-bold transition-transform", productsMenuOpen && "rotate-45")}>+</span>
+            </button>
+            {productsMenuOpen && (
+              <div className="ml-4 border-l-2 border-gray-100 pl-4 space-y-1">
+                {productItems.map((item) => (
+                  <Link
+                    key={item.label}
+                    href={item.href}
+                    onClick={() => {
+                      setProductsMenuOpen(false)
+                      setIsMobileMenuOpen(false)
+                    }}
+                    className="block px-4 py-2 text-sm text-gray-600 hover:text-[#722F37] transition-colors"
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
+
           {navLinks.map((link) => (
             <Link
               key={link.label}
