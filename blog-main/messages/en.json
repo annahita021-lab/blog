@@ -26,7 +26,12 @@
     "toggleMenu": "Toggle menu",
     "english": "English",
     "french": "Français",
-    "language": "Language"
+    "language": "Language",
+    "maintenance": "Maintenance",
+    "assetsParts": "Assets & Parts",
+    "communication": "Communication",
+    "crm": "CRM",
+    "salesRentals": "Sales & Rentals"
   },
   "Home": {
     "heroTitle": "How can we help you?",
