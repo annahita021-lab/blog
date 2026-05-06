@@ -82,13 +82,13 @@ export function Navbar() {
                 type="button"
                 onClick={() => setProductsMenuOpen(!productsMenuOpen)}
                 onBlur={() => setTimeout(() => setProductsMenuOpen(false), 150)}
-                className="relative flex items-center gap-1 px-4 py-2 text-sm font-medium text-gray-600 rounded-lg transition-all duration-200 hover:text-[#722F37] hover:bg-[#722F37]/5 group"
+                className="relative flex items-center gap-1 px-4 py-2 text-sm font-medium text-gray-600 rounded-lg transition-all duration-200 hover:text-[#4838BF] hover:bg-[#4838BF]/5 group"
                 aria-expanded={productsMenuOpen}
                 aria-haspopup="menu"
               >
                 {t("products")}
                 <span className="text-xs font-bold">+</span>
-                <span className="absolute bottom-1 left-4 right-4 h-0.5 bg-[#722F37] scale-x-0 group-hover:scale-x-100 transition-transform duration-200 origin-left" />
+                <span className="absolute bottom-1 left-4 right-4 h-0.5 bg-[#4838BF] scale-x-0 group-hover:scale-x-100 transition-transform duration-200 origin-left" />
               </button>
               {productsMenuOpen && (
                 <div className="absolute left-0 top-full mt-1 min-w-[200px] rounded-lg border border-gray-100 bg-white py-2 shadow-lg z-50">
@@ -99,7 +99,7 @@ export function Navbar() {
                       onMouseDown={(e) => e.preventDefault()}
                       onClick={() => setProductsMenuOpen(false)}
                       className={cn(
-                        "block px-5 py-3 text-sm font-medium text-gray-700 hover:text-[#722F37] hover:bg-gray-50 transition-colors",
+                        "block px-5 py-3 text-sm font-medium text-gray-700 hover:text-[#4838BF] hover:bg-gray-50 transition-colors",
                         index !== productItems.length - 1 && "border-b border-gray-100"
                       )}
                     >
@@ -114,10 +114,10 @@ export function Navbar() {
               <Link
                 key={link.label}
                 href={link.href}
-                className="relative px-4 py-2 text-sm font-medium text-gray-600 rounded-lg transition-all duration-200 hover:text-[#722F37] hover:bg-[#722F37]/5 group"
+                className="relative px-4 py-2 text-sm font-medium text-gray-600 rounded-lg transition-all duration-200 hover:text-[#4838BF] hover:bg-[#4838BF]/5 group"
               >
                 {link.label}
-                <span className="absolute bottom-1 left-4 right-4 h-0.5 bg-[#722F37] scale-x-0 group-hover:scale-x-100 transition-transform duration-200 origin-left" />
+                <span className="absolute bottom-1 left-4 right-4 h-0.5 bg-[#4838BF] scale-x-0 group-hover:scale-x-100 transition-transform duration-200 origin-left" />
               </Link>
             ))}
 
@@ -127,7 +127,7 @@ export function Navbar() {
                 type="button"
                 onClick={() => setLangMenuOpen(!langMenuOpen)}
                 onBlur={() => setTimeout(() => setLangMenuOpen(false), 150)}
-                className="flex items-center gap-1.5 px-3 py-2 text-sm font-medium text-gray-600 rounded-lg transition-all duration-200 hover:text-[#722F37] hover:bg-[#722F37]/5"
+                className="flex items-center gap-1.5 px-3 py-2 text-sm font-medium text-gray-600 rounded-lg transition-all duration-200 hover:text-[#4838BF] hover:bg-[#4838BF]/5"
                 aria-expanded={langMenuOpen}
                 aria-haspopup="listbox"
               >
@@ -144,7 +144,7 @@ export function Navbar() {
                       <button
                         type="button"
                         role="option"
-                        className="w-full px-4 py-2 text-left text-sm hover:bg-gray-50 hover:text-[#722F37]"
+                        className="w-full px-4 py-2 text-left text-sm hover:bg-gray-50 hover:text-[#4838BF]"
                         onMouseDown={(e) => e.preventDefault()}
                         onClick={() => switchLocale(loc)}
                       >
@@ -161,7 +161,7 @@ export function Navbar() {
           <div className="hidden md:flex items-center gap-3">
             <Button
               asChild
-              className="bg-[#722F37] hover:bg-[#5a252c] text-white font-medium px-5 h-10 rounded-lg shadow-sm transition-all duration-200 hover:shadow-md"
+              className="bg-[#4838BF] hover:bg-[#3a2d99] text-white font-medium px-5 h-10 rounded-lg shadow-sm transition-all duration-200 hover:shadow-md"
             >
               <Link href="#quote">{t("requestQuote")}</Link>
             </Button>
@@ -195,7 +195,7 @@ export function Navbar() {
             <button
               type="button"
               onClick={() => setProductsMenuOpen(!productsMenuOpen)}
-              className="flex items-center justify-between w-full px-4 py-3 text-sm font-medium text-gray-600 rounded-lg hover:text-[#722F37] hover:bg-[#722F37]/5 transition-colors"
+              className="flex items-center justify-between w-full px-4 py-3 text-sm font-medium text-gray-600 rounded-lg hover:text-[#4838BF] hover:bg-[#4838BF]/5 transition-colors"
             >
               <span>{t("products")}</span>
               <span className={cn("text-xs font-bold transition-transform", productsMenuOpen && "rotate-45")}>+</span>
@@ -210,7 +210,7 @@ export function Navbar() {
                       setProductsMenuOpen(false)
                       setIsMobileMenuOpen(false)
                     }}
-                    className="block px-4 py-2 text-sm text-gray-600 hover:text-[#722F37] transition-colors"
+                    className="block px-4 py-2 text-sm text-gray-600 hover:text-[#4838BF] transition-colors"
                   >
                     {item.label}
                   </Link>
@@ -224,7 +224,7 @@ export function Navbar() {
               key={link.label}
               href={link.href}
               onClick={() => setIsMobileMenuOpen(false)}
-              className="block px-4 py-3 text-sm font-medium text-gray-600 rounded-lg hover:text-[#722F37] hover:bg-[#722F37]/5 transition-colors"
+              className="block px-4 py-3 text-sm font-medium text-gray-600 rounded-lg hover:text-[#4838BF] hover:bg-[#4838BF]/5 transition-colors"
             >
               {link.label}
             </Link>
@@ -238,7 +238,7 @@ export function Navbar() {
                 key={loc}
                 type="button"
                 onClick={() => switchLocale(loc)}
-                className="flex items-center gap-2 w-full px-4 py-3 text-sm font-medium text-gray-600 rounded-lg hover:text-[#722F37] hover:bg-[#722F37]/5 transition-colors text-left"
+                className="flex items-center gap-2 w-full px-4 py-3 text-sm font-medium text-gray-600 rounded-lg hover:text-[#4838BF] hover:bg-[#4838BF]/5 transition-colors text-left"
               >
                 {loc === "en" ? t("english") : t("french")}
               </button>
@@ -248,7 +248,7 @@ export function Navbar() {
           <div className="pt-3 px-4">
             <Button
               asChild
-              className="w-full bg-[#722F37] hover:bg-[#5a252c] text-white font-medium h-11 rounded-lg"
+              className="w-full bg-[#4838BF] hover:bg-[#3a2d99] text-white font-medium h-11 rounded-lg"
             >
               <Link href="#quote" onClick={() => setIsMobileMenuOpen(false)}>
                 {t("requestQuote")}
