@@ -5,8 +5,8 @@
 
 :root {
   /* Header Accent Color - change this single value to adapt the header to any brand */
-  --header-accent: #4838BF;
-  --header-accent-hover: #3a2d99;
+  --header-accent: #701951;
+  --header-accent-hover: #5a1441;
   
   --background: oklch(0.985 0 0);
   --foreground: oklch(0.145 0 0);
