@@ -4,6 +4,10 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
+  /* Header Accent Color - change this single value to adapt the header to any brand */
+  --header-accent: #4838BF;
+  --header-accent-hover: #3a2d99;
+  
   --background: oklch(0.985 0 0);
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
