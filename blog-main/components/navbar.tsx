@@ -99,11 +99,12 @@ export function Navbar() {
                       onMouseDown={(e) => e.preventDefault()}
                       onClick={() => setProductsMenuOpen(false)}
                       className={cn(
-                        "block px-5 py-3 text-sm font-medium text-gray-700 hover:text-[var(--header-accent)] hover:bg-gray-50 transition-colors",
+                        "relative block px-5 py-3 text-sm font-medium text-gray-700 hover:text-[var(--header-accent)] hover:bg-gray-50 transition-colors group",
                         index !== productItems.length - 1 && "border-b border-gray-100"
                       )}
                     >
                       {item.label}
+                      <span className="absolute bottom-2 left-5 right-5 h-0.5 bg-[var(--header-accent)] scale-x-0 group-hover:scale-x-100 transition-transform duration-200 origin-left" />
                     </Link>
                   ))}
                 </div>
@@ -158,7 +159,7 @@ export function Navbar() {
                       <button
                         type="button"
                         role="option"
-                        className="flex items-center gap-3 w-full px-4 py-2 text-left text-sm hover:bg-gray-50 hover:text-[var(--header-accent)]"
+                        className="relative flex items-center gap-3 w-full px-4 py-2 text-left text-sm hover:bg-gray-50 hover:text-[var(--header-accent)] group"
                         onMouseDown={(e) => e.preventDefault()}
                         onClick={() => switchLocale(loc)}
                       >
@@ -178,6 +179,7 @@ export function Navbar() {
                           </svg>
                         )}
                         {loc === "en" ? t("english") : t("french")}
+                        <span className="absolute bottom-1 left-4 right-4 h-0.5 bg-[var(--header-accent)] scale-x-0 group-hover:scale-x-100 transition-transform duration-200 origin-left" />
                       </button>
                     </li>
                   ))}
@@ -239,9 +241,10 @@ export function Navbar() {
                       setProductsMenuOpen(false)
                       setIsMobileMenuOpen(false)
                     }}
-                    className="block px-4 py-2 text-sm text-gray-600 hover:text-[var(--header-accent)] transition-colors"
+                    className="relative block px-4 py-2 text-sm text-gray-600 hover:text-[var(--header-accent)] transition-colors group"
                   >
                     {item.label}
+                    <span className="absolute bottom-1 left-4 right-4 h-0.5 bg-[var(--header-accent)] scale-x-0 group-hover:scale-x-100 transition-transform duration-200 origin-left" />
                   </Link>
                 ))}
               </div>
@@ -253,9 +256,10 @@ export function Navbar() {
               key={link.label}
               href={link.href}
               onClick={() => setIsMobileMenuOpen(false)}
-              className="block px-4 py-3 text-sm font-medium text-gray-600 rounded-lg hover:text-[var(--header-accent)] hover:bg-[var(--header-accent)]/5 transition-colors"
+              className="relative block px-4 py-3 text-sm font-medium text-gray-600 rounded-lg hover:text-[var(--header-accent)] hover:bg-[var(--header-accent)]/5 transition-colors group"
             >
               {link.label}
+              <span className="absolute bottom-2 left-4 right-4 h-0.5 bg-[var(--header-accent)] scale-x-0 group-hover:scale-x-100 transition-transform duration-200 origin-left" />
             </Link>
           ))}
 
@@ -267,7 +271,7 @@ export function Navbar() {
                 key={loc}
                 type="button"
                 onClick={() => switchLocale(loc)}
-                className="flex items-center gap-3 w-full px-4 py-3 text-sm font-medium text-gray-600 rounded-lg hover:text-[var(--header-accent)] hover:bg-[var(--header-accent)]/5 transition-colors text-left"
+                className="relative flex items-center gap-3 w-full px-4 py-3 text-sm font-medium text-gray-600 rounded-lg hover:text-[var(--header-accent)] hover:bg-[var(--header-accent)]/5 transition-colors text-left group"
               >
                 {loc === "en" ? (
                   <svg className="w-5 h-4 rounded-sm overflow-hidden" viewBox="0 0 640 480">
@@ -285,6 +289,7 @@ export function Navbar() {
                   </svg>
                 )}
                 {loc === "en" ? t("english") : t("french")}
+                <span className="absolute bottom-2 left-4 right-4 h-0.5 bg-[var(--header-accent)] scale-x-0 group-hover:scale-x-100 transition-transform duration-200 origin-left" />
               </button>
             ))}
           </div>
