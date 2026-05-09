@@ -88,7 +88,7 @@ export function Navbar() {
               >
                 {t("products")}
                 <span className="text-xs font-bold">+</span>
-                <span className="absolute bottom-1 left-4 right-4 h-px bg-[var(--header-accent)] scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-out origin-left" />
+                <span className="absolute bottom-1 left-4 h-px w-0 group-hover:w-[calc(100%-2rem)] bg-[var(--header-accent)] transition-[width] duration-500 ease-out" />
               </button>
               {productsMenuOpen && (
                 <div className="absolute left-0 top-full mt-1 min-w-[200px] rounded-lg border border-gray-100 bg-white py-2 shadow-lg z-50">
@@ -104,7 +104,7 @@ export function Navbar() {
                       )}
                     >
                       {item.label}
-                      <span className="absolute bottom-2 left-5 right-5 h-px bg-[var(--header-accent)] scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-out origin-left" />
+                      <span className="absolute bottom-2 left-5 h-px w-0 group-hover:w-[calc(100%-2.5rem)] bg-[var(--header-accent)] transition-[width] duration-500 ease-out" />
                     </Link>
                   ))}
                 </div>
@@ -118,7 +118,7 @@ export function Navbar() {
                 className="relative px-4 py-2 text-sm font-medium text-gray-600 rounded-lg transition-all duration-200 hover:text-[var(--header-accent)] hover:bg-[var(--header-accent)]/5 group"
               >
                 {link.label}
-                <span className="absolute bottom-1 left-4 right-4 h-px bg-[var(--header-accent)] scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-out origin-left" />
+                <span className="absolute bottom-1 left-4 h-px w-0 group-hover:w-[calc(100%-2rem)] bg-[var(--header-accent)] transition-[width] duration-500 ease-out" />
               </Link>
             ))}
 
@@ -179,7 +179,7 @@ export function Navbar() {
                           </svg>
                         )}
                         {loc === "en" ? t("english") : t("french")}
-                        <span className="absolute bottom-1 left-4 right-4 h-px bg-[var(--header-accent)] scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-out origin-left" />
+                        <span className="absolute bottom-1 left-4 h-px w-0 group-hover:w-[calc(100%-2rem)] bg-[var(--header-accent)] transition-[width] duration-500 ease-out" />
                       </button>
                     </li>
                   ))}
@@ -244,7 +244,7 @@ export function Navbar() {
                     className="relative block px-4 py-2 text-sm text-gray-600 hover:text-[var(--header-accent)] transition-colors group"
                   >
                     {item.label}
-                    <span className="absolute bottom-1 left-4 right-4 h-px bg-[var(--header-accent)] scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-out origin-left" />
+                    <span className="absolute bottom-1 left-4 h-px w-0 group-hover:w-[calc(100%-2rem)] bg-[var(--header-accent)] transition-[width] duration-500 ease-out" />
                   </Link>
                 ))}
               </div>
@@ -259,7 +259,7 @@ export function Navbar() {
               className="relative block px-4 py-3 text-sm font-medium text-gray-600 rounded-lg hover:text-[var(--header-accent)] hover:bg-[var(--header-accent)]/5 transition-colors group"
             >
               {link.label}
-              <span className="absolute bottom-2 left-4 right-4 h-px bg-[var(--header-accent)] scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-out origin-left" />
+              <span className="absolute bottom-2 left-4 h-px w-0 group-hover:w-[calc(100%-2rem)] bg-[var(--header-accent)] transition-[width] duration-500 ease-out" />
             </Link>
           ))}
 
@@ -289,7 +289,7 @@ export function Navbar() {
                   </svg>
                 )}
                 {loc === "en" ? t("english") : t("french")}
-                <span className="absolute bottom-2 left-4 right-4 h-px bg-[var(--header-accent)] scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-out origin-left" />
+                <span className="absolute bottom-2 left-4 h-px w-0 group-hover:w-[calc(100%-2rem)] bg-[var(--header-accent)] transition-[width] duration-500 ease-out" />
               </button>
             ))}
           </div>
