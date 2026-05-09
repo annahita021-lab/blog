@@ -20,6 +20,7 @@ export function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [langMenuOpen, setLangMenuOpen] = useState(false)
   const [productsMenuOpen, setProductsMenuOpen] = useState(false)
+  const [companyMenuOpen, setCompanyMenuOpen] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -45,10 +46,14 @@ export function Navbar() {
     { label: t("salesRentals"), href: "#sales-rentals" },
   ]
 
+  const companyItems = [
+    { label: t("aboutUs"), href: "#about" },
+    { label: t("contact"), href: "#contact" },
+  ]
+
   const navLinks = [
     { label: t("pricing"), href: "#pricing" },
     { label: t("blog"), href: "/" },
-    { label: t("ourCompany"), href: "#company" },
   ]
 
   return (
@@ -121,6 +126,41 @@ export function Navbar() {
                 <span className="absolute bottom-1 left-4 h-px w-0 group-hover:w-[calc(100%-2rem)] bg-[var(--header-accent)] transition-[width] duration-500 ease-out" />
               </Link>
             ))}
+
+            {/* Our Company Dropdown */}
+            <div className="relative">
+              <button
+                type="button"
+                onClick={() => setCompanyMenuOpen(!companyMenuOpen)}
+                onBlur={() => setTimeout(() => setCompanyMenuOpen(false), 150)}
+                className="relative flex items-center gap-1 px-4 py-2 text-sm font-medium text-gray-600 rounded-lg transition-all duration-200 hover:text-[var(--header-accent)] hover:bg-[var(--header-accent)]/5 group"
+                aria-expanded={companyMenuOpen}
+                aria-haspopup="menu"
+              >
+                {t("ourCompany")}
+                <span className="text-xs font-bold">+</span>
+                <span className="absolute bottom-1 left-4 h-px w-0 group-hover:w-[calc(100%-2rem)] bg-[var(--header-accent)] transition-[width] duration-500 ease-out" />
+              </button>
+              {companyMenuOpen && (
+                <div className="absolute left-0 top-full mt-1 min-w-[180px] rounded-lg border border-gray-100 bg-white py-2 shadow-lg z-50">
+                  {companyItems.map((item, index) => (
+                    <Link
+                      key={item.label}
+                      href={item.href}
+                      onMouseDown={(e) => e.preventDefault()}
+                      onClick={() => setCompanyMenuOpen(false)}
+                      className={cn(
+                        "relative block px-5 py-3 text-sm font-medium text-gray-700 hover:text-[var(--header-accent)] hover:bg-gray-50 transition-colors group",
+                        index !== companyItems.length - 1 && "border-b border-gray-100"
+                      )}
+                    >
+                      {item.label}
+                      <span className="absolute bottom-2 left-5 h-px w-0 group-hover:w-[calc(100%-2.5rem)] bg-[var(--header-accent)] transition-[width] duration-500 ease-out" />
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
 
             {/* Language Switcher */}
             <div className="relative ml-2">
@@ -262,6 +302,36 @@ export function Navbar() {
               <span className="absolute bottom-2 left-4 h-px w-0 group-hover:w-[calc(100%-2rem)] bg-[var(--header-accent)] transition-[width] duration-500 ease-out" />
             </Link>
           ))}
+
+          {/* Mobile Our Company Dropdown */}
+          <div>
+            <button
+              type="button"
+              onClick={() => setCompanyMenuOpen(!companyMenuOpen)}
+              className="flex items-center justify-between w-full px-4 py-3 text-sm font-medium text-gray-600 rounded-lg hover:text-[var(--header-accent)] hover:bg-[var(--header-accent)]/5 transition-colors"
+            >
+              <span>{t("ourCompany")}</span>
+              <span className={cn("text-xs font-bold transition-transform", companyMenuOpen && "rotate-45")}>+</span>
+            </button>
+            {companyMenuOpen && (
+              <div className="ml-4 border-l-2 border-gray-100 pl-4 space-y-1">
+                {companyItems.map((item) => (
+                  <Link
+                    key={item.label}
+                    href={item.href}
+                    onClick={() => {
+                      setCompanyMenuOpen(false)
+                      setIsMobileMenuOpen(false)
+                    }}
+                    className="relative block px-4 py-2 text-sm text-gray-600 hover:text-[var(--header-accent)] transition-colors group"
+                  >
+                    {item.label}
+                    <span className="absolute bottom-1 left-4 h-px w-0 group-hover:w-[calc(100%-2rem)] bg-[var(--header-accent)] transition-[width] duration-500 ease-out" />
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
 
           {/* Mobile Language Switcher */}
           <div className="space-y-1 pt-2 border-t border-gray-100">
