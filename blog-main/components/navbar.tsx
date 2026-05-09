@@ -67,9 +67,9 @@ export function Navbar() {
             <Image
               src="/images/logo.png"
               alt="Property Care App"
-              width={120}
-              height={48}
-              className="h-10 w-auto"
+              width={150}
+              height={60}
+              className="h-12 w-auto"
               priority
             />
           </Link>
